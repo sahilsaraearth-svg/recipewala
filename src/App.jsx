@@ -1,11 +1,11 @@
-import Home from './components/Home'
+import Page from "./components/Page";
 
 const App = () => {
   return (
-    <div>
-      <Home />
+    <div className="">
+     <Page />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
