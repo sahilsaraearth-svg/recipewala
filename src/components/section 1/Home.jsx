@@ -1,5 +1,3 @@
-import { useState } from "react";
-import Navbar from "../layout/Navbar";
 import Button from "../ui/Button";
 import ButtonTwo from "../ui/ButtonTwo";
 import {
@@ -19,16 +17,16 @@ const Home = () => {
   return (
     <div className="h-screen  ">
       <div className="h-full flex flex-col gap-6 items-center justify-center max-w-6xl mx-auto px-4 relative">
-        <div className="absolute top-20 -left-25 h-full w-full bg-[url('https://png.pngtree.com/png-vector/20250728/ourmid/pngtree-testy-fast-food-burger-png-image_16906169.webp')] bg-no-repeat "></div>
-        
+        <span className="absolute top-30 left-0 sm:top-20 sm:-left-25 h-30 w-30  sm:h-100 sm:w-100 bg-[url('https://png.pngtree.com/png-vector/20250728/ourmid/pngtree-testy-fast-food-burger-png-image_16906169.webp')] bg-no-repeat bg-cover"></span>
+
         {/* Badge */}
-        <span className=" inline-flex animate-fade-in-down items-center px-6 py-2.5 rounded-full bg-orange-50 text-[#F83002] text-lg font-semibold shadow-sm border border-orange-100">
+        <span className=" inline-flex animate-fade-in-down items-center px-6 py-2.5 rounded-full bg-orange-50 text-[#F83002] text-sm md:text-lg font-semibold shadow-sm border border-orange-100">
           <CookingPot size={20} className="mr-2" />
           Smart Cooking Starts Here.
         </span>
 
         {/* Heading */}
-        <h1 className="mt-4 text-4xl md:text-7xl font-bold tracking-tight animate-fade-in-up text-center">
+        <h1 className="mt-4 text-3xl md:text-7xl font-bold tracking-tight animate-fade-in-up text-center">
           Quick Recipes &amp; <br />
           Better Ways{" "}
           <span className="text-[#6A38C2] relative">
@@ -50,7 +48,7 @@ const Home = () => {
         </h1>
 
         {/* Subtitle */}
-        <p className="mt-4 font-normal text-base text-neutral-600 max-w-lg text-center mx-auto">
+        <p className="mt-4 font-normal text-sm sm:text-base text-neutral-600 max-w-lg text-center mx-auto">
           AI Chef brings innovation to your kitchen, serving smart recipe ideas
           that balance flavor, freshness, and modern technology.
         </p>
