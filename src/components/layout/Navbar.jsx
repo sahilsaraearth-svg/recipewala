@@ -15,19 +15,22 @@ const Navbar = () => {
 
   const btnName = "Login";
   const btnNameTwo = "Sign up";
-
   return (
-    <div className="sticky top-0 z-50 border-b border-neutral-300 py-4 px-8 backdrop-blur-md bg-neutral-100/10 ">
+    <div className="sticky top-0 z-50 border-b border-neutral-300 py-4 px-8 backdrop-blur-md bg-neutral-100/30 ">
       <div className="flex  rounded-full justify-between items-center max-w-7xl mx-auto ">
-        <h1 className="font-bold uppercase text-3xl tracking-wide cursor-pointer text-neutral-700">
-          Chef
-        </h1>
+        <div className="flex items-center gap-2">
+          <img src="../src/assets/logo.png" alt="logo" className="h-10 w-10" />
+          <h1 className="font-bold capitalize text-3xl tracking-wide cursor-pointer text-neutral-700">
+            Ai??
+          </h1>
+        </div>
+
         {/* Desktop Menu */}
-        <div className="hidden sm:flex   items-center gap-10 list-none text-neutral-700 font-medium">
+        <div className="hidden sm:flex   items-center gap-10 list-none text-neutral-700 font-semibold">
           {links.map((link, index) => (
             <li
               key={index}
-              className="hover:text-neutral-400 cursor-pointer hover:-translate-y-0.75 transition-transform duration-200"
+              className="hover:text-orange-600 cursor-pointer hover:-translate-y-0.75 transition-transform duration-200"
             >
               <Link to={link.href}>{link.name}</Link>
             </li>

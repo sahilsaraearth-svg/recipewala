@@ -1,13 +1,11 @@
 import Button from "../ui/Button";
 import ButtonTwo from "../ui/ButtonTwo";
+import { AnimatePresence, motion } from "motion/react";
 import {
-  Briefcase,
-  CookieIcon,
-  CookingPot,
-  Search,
   Star,
   TrendingUp,
 } from "lucide-react";
+import { SahilBrifCase, SahilSart } from "../ui/IconsFile";
 
 const Home = () => {
   const btnName = "Get AI Suggestion";
@@ -21,7 +19,7 @@ const Home = () => {
 
         {/* Badge */}
         <span className=" inline-flex animate-fade-in-down items-center px-6 py-2.5 rounded-full bg-orange-50 text-[#F83002] text-sm md:text-lg font-semibold shadow-sm border border-orange-100">
-          <CookingPot size={20} className="mr-2" />
+          <SahilSart />
           Smart Cooking Starts Here.
         </span>
 
@@ -37,11 +35,15 @@ const Home = () => {
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path
-                d="M2 5.8c54-4 98.5-4.3 137.3-3.5 39 .8 78.6 2.7 118.4 3.7 39.7 1 79.6 1.2 98.3 1.2"
+              <motion.path
+                d="M2 5.8c54-4 98.5-4.3 137.3-3.5 39 .8 78.6 2.7 118.4 3.7 39.7 1 79.6 1.2 98.3 1.3"
                 stroke="#6A38C2"
                 strokeWidth="3"
                 strokeLinecap="round"
+                initial={{ pathLength: 0 }}
+                whileInView={{ pathLength: 1 }}
+                exit={{ pathLength: 0 }}
+                transition={{ duration: 0.6, ease: "easeInOut" }}
               />
             </svg>
           </span>
@@ -76,7 +78,7 @@ const Home = () => {
           </div>
 
           <div className="flex items-center gap-2">
-            <Briefcase size={20} className="text-[#6A38C2]" />
+            <SahilBrifCase />
             <span className="text-lg">
               <strong className="font-bold">15k+</strong> Candidates
             </span>
