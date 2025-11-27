@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
-const ButtonTwo = ({btnname}) => {
+const ButtonTwo = ({ btnname }) => {
   return (
-     <button className=" cursor-pointer hover:-translate-y-0.75 transition-transform duration-200 backdrop-blur-2xl  rounded-2xl  shadow-neutral-300/10 shadow-md py-1 px-6  border-neutral-200 border text-neutral-700">
+    <button className="cursor-pointer hover:-translate-y-0.75 transition-transform duration-200 font-medium inset shadow-md hover:shadow-neutral-400 border-neutral-100 border text-neutral-800 text-sm sm:text-lg py-2 px-10 rounded-xl bg-white">
       {btnname}
     </button>
-  )
-}
+  );
+};
 
-export default ButtonTwo
+export default ButtonTwo;

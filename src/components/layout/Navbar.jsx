@@ -9,24 +9,32 @@ const Navbar = () => {
 
   const links = [
     { name: "Home", href: "/" },
-    { name: "Recipes", href: "/recipes" },
-    { name: "About", href: "/about" },
+    { name: "Recipes", href: "/Recipe" },
+    { name: "About", href: "/About" },
   ];
 
-  const btnName = "Login";
   const btnNameTwo = "Sign up";
   return (
     <div className="sticky top-0 z-50 border-b border-neutral-300 py-4 px-8 backdrop-blur-md bg-neutral-100/30 ">
       <div className="flex  rounded-full justify-between items-center max-w-7xl mx-auto ">
         <div className="flex items-center gap-2">
-          <img src="../src/assets/logo.png" alt="logo" className="h-10 w-10" />
-          <h1 className="font-bold capitalize text-3xl tracking-wide cursor-pointer text-neutral-700">
+          <a href="/">
+            <img
+              src="../src/assets/logo.png"
+              alt="logo"
+              className="h-10 w-10 cursor-pointer"
+            />
+          </a>
+          <a
+            href="/"
+            className="font-bold capitalize text-3xl tracking-wide cursor-pointer text-neutral-700 font-display"
+          >
             Ai??
-          </h1>
+          </a>
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden sm:flex   items-center gap-10 list-none text-neutral-700 font-semibold">
+        <div className="hidden sm:flex   items-center gap-10 list-none text-neutral-700 font-medium">
           {links.map((link, index) => (
             <li
               key={index}
@@ -38,7 +46,7 @@ const Navbar = () => {
         </div>
         <div className="hidden sm:flex gap-5">
           <button>Login</button>
-          <Button btnname={btnNameTwo} />
+          <Button btnname={btnNameTwo} cn={"text-sm sm:text-base py-1 px-6"}/>
         </div>
         {/* Mobile Menu Button */}
         <button
@@ -76,7 +84,7 @@ const Navbar = () => {
               ))}
               <div className="flex  gap-5">
                 <button>Login</button>
-                <Button btnname={btnNameTwo} />
+                <Button btnname={btnNameTwo} cn={"text-sm sm:text-base"}/>
               </div>
             </div>
           </div>

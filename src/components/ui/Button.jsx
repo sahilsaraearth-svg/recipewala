@@ -1,8 +1,8 @@
 import React from "react";
 
-const Button = ({ btnname }) => {
+const Button = ({ btnname, cn }) => {
   return (
-    <button className=" cursor-pointer hover:-translate-y-0.75 transition-transform duration-200 bg-neutral-900 rounded-2xl text-neutral-100 text-sm sm:text-base  shadow-neutral-400 shadow-md py-1 px-6  border-neutral-400  border">
+    <button className={`cursor-pointer hover:-translate-y-0.75 transition-transform duration-200 bg-orange-600 rounded-xl text-neutral-100 font-medium  shadow-neutral-300 shadow-md  border-neutral-300 border ${cn}`}>
       {btnname}
     </button>
   );
