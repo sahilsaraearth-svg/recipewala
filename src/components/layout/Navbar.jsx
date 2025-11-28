@@ -1,8 +1,11 @@
 import { MenuIcon, X } from "lucide-react";
 import { useState } from "react";
-import { motion } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
 import Button from "../ui/Button";
 import { Link } from "react-router-dom";
+
+const MotionSpan = motion.span;
+const MotionDiv = motion.div;
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,6 +15,8 @@ const Navbar = () => {
     { name: "Recipes", href: "/Recipe" },
     { name: "About", href: "/About" },
   ];
+
+  const [hoverd, setHoverd] = useState(null);
 
   const btnNameTwo = "Sign up";
   return (
@@ -35,18 +40,42 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <div className="hidden sm:flex   items-center gap-10 list-none text-neutral-700 font-medium">
-          {links.map((link, index) => (
-            <li
-              key={index}
-              className="hover:text-orange-600 cursor-pointer hover:-translate-y-0.75 transition-transform duration-200"
-            >
-              <Link to={link.href}>{link.name}</Link>
-            </li>
-          ))}
+          <nav className=" backdrop-blur rounded-full  flex gap-2">
+            {links.map((link, index) => (
+              <MotionSpan key={link.href}>
+                <Link
+                  onMouseEnter={() => setHoverd(index)}
+                  onMouseLeave={() => setHoverd(null)}
+                  className=" relative block group text-center py-1 px-4"
+                  to={link.href}
+                >
+                  <AnimatePresence>
+                    {hoverd === index && (
+                      <MotionDiv
+                        layoutId="hoverd"
+                        className="absolute h-full w-full bg-orange-600 inset-0 rounded-full"
+                        transition={{
+                          type: "spring",
+                          stiffness: 400,
+                          damping: 30,
+                        }}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                      />
+                    )}
+                  </AnimatePresence>
+                  <span className="relative z-10 font-medium tracking-wide text-neutral-600 group-hover:text-white">
+                    {link.name}
+                  </span>
+                </Link>
+              </MotionSpan>
+            ))}
+          </nav>
         </div>
         <div className="hidden sm:flex gap-5">
           <button>Login</button>
-          <Button btnname={btnNameTwo} cn={"text-sm sm:text-base py-1 px-6"}/>
+          <Button btnname={btnNameTwo} cn={"text-sm sm:text-base py-1 px-6"} />
         </div>
         {/* Mobile Menu Button */}
         <button
@@ -84,7 +113,7 @@ const Navbar = () => {
               ))}
               <div className="flex  gap-5">
                 <button>Login</button>
-                <Button btnname={btnNameTwo} cn={"text-sm sm:text-base"}/>
+                <Button btnname={btnNameTwo} cn={"text-sm sm:text-base"} />
               </div>
             </div>
           </div>
