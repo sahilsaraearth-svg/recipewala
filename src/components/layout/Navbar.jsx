@@ -20,8 +20,8 @@ const Navbar = () => {
 
   const btnNameTwo = "Sign up";
   return (
-    <div className="sticky top-0 z-50 border-b border-neutral-300 py-4 px-8 backdrop-blur-md bg-neutral-100/30 ">
-      <div className="flex  rounded-full justify-between items-center max-w-7xl mx-auto ">
+    <div className="sticky top-0 z-50 border-b border-neutral-200 py-4 px-8 backdrop-blur-md bg-neutral-100/70 ">
+      <div className="flex  rounded-full justify-between items-center max-w-6xl mx-auto ">
         <div className="flex items-center gap-2">
           <a href="/">
             <img
@@ -40,7 +40,7 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <div className="hidden sm:flex   items-center gap-10 list-none text-neutral-700 font-medium">
-          <nav className=" backdrop-blur rounded-full  flex gap-2">
+          <nav className="  rounded-full  flex gap-2">
             {links.map((link, index) => (
               <MotionSpan key={link.href}>
                 <Link
