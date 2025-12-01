@@ -27,14 +27,14 @@ const Navbar = () => {
             <img
               src="../src/assets/logo.png"
               alt="logo"
-              className="h-10 w-10 cursor-pointer"
+              className="h-10 w-12 cursor-pointer object-contain"
             />
           </a>
           <a
             href="/"
-            className="font-bold capitalize text-3xl tracking-wide cursor-pointer text-neutral-700 font-display"
+            className="font-bold capitalize text-xl tracking-wide cursor-pointer text-neutral-700 font-display"
           >
-            Ai??
+            CHEFY AI
           </a>
         </div>
 

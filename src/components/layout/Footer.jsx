@@ -12,11 +12,11 @@ const Footer = () => {
       <div className=" px-8 pt-20 pb-32 relative bg-white border-neutral-200 border-t">
         <div className="max-w-6xl mx-auto text-sm text-neutral-800  flex sm:flex-row flex-col justify-between items-start ">
           <div className="flex flex-col gap-2">
-            <a href="/" className="flex items-center font-bold text-md">
+            <a href="/" className="flex items-center font-bold text-md ">
               <img
                 src="../src/assets/logo.png"
                 alt="logo"
-                className="h-8 w-8 cursor-pointer"
+                className="h-8 w-10 cursor-pointer object-contain pr-2"
               />
               Chefy AI
             </a>
