@@ -54,7 +54,7 @@ const Footer = () => {
         </div>
       </div>
       <div>
-        <p className="text-center text-8xl md:text-9xl lg:text-[18rem] font-extrabold bg-clip-text text-transparent bg-linear-to-b from-neutral-50  to-neutral-200 dark:to-neutral-300 inset-x-0">
+        <p className="text-center text-7xl md:text-9xl lg:text-[18rem] font-extrabold bg-clip-text text-transparent bg-linear-to-b from-neutral-50  to-neutral-200 dark:to-neutral-300 inset-x-0">
           CHEFY AI
         </p>
       </div>
