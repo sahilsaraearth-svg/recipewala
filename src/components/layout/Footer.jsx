@@ -14,7 +14,7 @@ const Footer = () => {
           <div className="flex flex-col gap-2">
             <a href="/" className="flex items-center font-bold text-md ">
               <img
-                src="/public/logo.svg"
+                src="https://raw.githubusercontent.com/sahilsaraearth-svg/recipewala/8d1fc62eede659f9cf5e57c8921d6572b22e3f45/public/logo.svg"
                 alt="logo"
                 className="h-10 w-15 cursor-pointer object-cover pr-2"
               />
