@@ -33,7 +33,7 @@ const Navbar = () => {
             to="/"
             className="font-bold capitalize text-3xl tracking-wide cursor-pointer text-neutral-700 font-display"
           >
-            Ai??
+            Chefy AI
           </Link>
         </div>
 

@@ -60,7 +60,7 @@ const CardSection = () => {
               Handpicked delicious recipes to inspire your next meal
             </p>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-5 justify-items-center items-start md:max-w-6xl m-auto mb-20 px-5 md:px-0.5  ">
+          <div className="grid  sm:grid-cols-3 gap-5 justify-items-center items-start md:max-w-6xl m-auto mb-20 px-6 md:px-0.5  ">
             {imgUrl.map((meal, index) => (
               <motion.div
                 key={meal.idMeal}
@@ -77,7 +77,7 @@ const CardSection = () => {
                 <motion.img
                   layoutId={`card-image-${meal.idMeal}`}
                   src={meal.strMealThumb}
-                  className="w-full   shadow-sm object-cover"
+                  className="w-full h-90 md:h-full shadow-sm object-cover"
                 />
                 <motion.div
                   layoutId={`card-body-${meal.idMeal}`}

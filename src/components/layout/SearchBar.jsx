@@ -20,7 +20,7 @@ const SearchBar = () => {
             <input
               type="text"
               placeholder="Search recipes or ingredients"
-              className="w-full pl-16 py-3 md:pr-6 md:py-5 bg-white md:text-lg rounded-full border-2 border-gray-200 focus:border-orange-500 focus:outline-none focus:ring-4 focus:ring-orange-100 transition-all duration-300 shadow-lg text-md"
+              className="w-full pl-16 py-3 pr-4 md:pr-6 md:py-5 bg-white md:text-lg rounded-full border-2 border-gray-200 focus:border-orange-500 focus:outline-none focus:ring-4 focus:ring-orange-100 transition-all duration-300 shadow-lg text-md"
             />
             <button className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-linear-to-r from-orange-500 to-orange-600  text-white md:px-8 md:py-3 rounded-full font-semibold transition-all duration-300 shadow-sm hover:scale-95 md:text-base text-sm py-2 px-3">
               Search

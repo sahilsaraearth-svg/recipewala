@@ -51,8 +51,8 @@ const Feature = () => {
               <span className="bg-linear-to-br from-orange-400 to-orange-600 p-4 shadow-lg rounded-2xl ">
                 <feature.icon className="w-8 h-8 text-white" />
               </span>
-              <h2 className="font-bold font-man text-lg">{feature.title}</h2>
-              <p className="text-neutral-600 text-sm">{feature.description}</p>
+              <h2 className="font-bold font-man text-xl">{feature.title}</h2>
+              <p className="text-neutral-600 text-[15px]">{feature.description}</p>
             </MotionDiv>
           );
         })}

@@ -48,7 +48,7 @@ export const Herobtn = () => {
     <button
       onClick={() => navigate("/airecipe")}
       className="cursor-pointer hover:scale-95 transition-transform duration-200  bg-linear-to-br bg-orange-400 via-orange-500 to-orange-600 
-rounded-full text-neutral-100 font-medium shadow-neutral-300 shadow-md border-neutral-300 border text-sm sm:text-base py-1 px-6"
+rounded-full text-neutral-100 font-medium shadow-neutral-300 shadow-md border-neutral-300 border text-base sm:text-base py-1.5 px-6"
     >
       Get AI Suggestion
     </button>
@@ -60,7 +60,7 @@ export const HerobtnTwo = () => {
     <button
       onClick={() => navigate("/recipe")}
       className="cursor-pointer hover:scale-95 transition-transform duration-200  bg-linear-to-br bg-neutral-100 via-neutral-200 to-neutral-100 
- text-neutral-800 font-medium shadow-neutral-300 shadow-md border-neutral-300 border text-sm sm:text-base py-1.5 px-8 rounded-full"
+text-neutral-800 font-medium shadow-neutral-300 shadow-md border-neutral-300 border text-base sm:text-base py-1.5 px-6 rounded-full"
     >
       Explore Recipes
     </button>
