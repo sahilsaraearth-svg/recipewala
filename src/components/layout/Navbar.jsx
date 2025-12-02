@@ -1,7 +1,7 @@
 import { MenuIcon, X } from "lucide-react";
 import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import Button from "../ui/Button";
+import { LoginBtn } from "../ui/Button";
 import { Link } from "react-router-dom";
 
 const MotionSpan = motion.span;
@@ -13,13 +13,11 @@ const Navbar = () => {
   const links = [
     { name: "Home", href: "/" },
     { name: "Recipes", href: "/recipe" },
-    { name: "Ai", href: "/airecipe" },
-    { name: "Auth", href: "/auth" },
+    { name: "AI Bot", href: "/airecipe" },
   ];
 
   const [hoverd, setHoverd] = useState(null);
 
-  const btnNameTwo = "Sign up";
   return (
     <div className="sticky top-0 z-50 border-b border-neutral-300 py-4 px-8 backdrop-blur-md bg-neutral-100/30 ">
       <div className="flex  rounded-full justify-between items-center max-w-6xl mx-auto ">
@@ -75,8 +73,7 @@ const Navbar = () => {
           </nav>
         </div>
         <div className="hidden sm:flex gap-5">
-          <button>Login</button>
-          <Button btnname={btnNameTwo} cn={"text-sm sm:text-base py-1 px-6"} />
+          <LoginBtn />
         </div>
         <button
           onClick={() => setIsOpen(!isOpen)}
@@ -112,13 +109,7 @@ const Navbar = () => {
                 </motion.li>
               ))}
               <div className="flex flex-col gap-5">
-                <button className="px-5 py-1.5 text-base bg-neutral-200/40 rounded-full shadow-sm border-neutral-200 border">
-                  Login
-                </button>
-                <Button
-                  btnname={btnNameTwo}
-                  cn={"text-sm sm:text-base py-1.5 px-4"}
-                />
+                <LoginBtn />
               </div>
             </div>
           </div>
