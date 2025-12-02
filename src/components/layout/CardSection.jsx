@@ -39,12 +39,12 @@ const CardSection = () => {
   return (
     <div className="h-full relative bg-linear-to-t from-white to-green-50 ">
       {loading ? (
-        <div className="flex flex-col w-full min-h-280 items-center justify-center">
-          <div className="w-full flex flex-col justify-center items-center mb-10 gap-3 ">
-            <h1 className="text-2xl md:text-7xl font-medium tracking-tight animate-fade-in-up text-center font-display ">
+        <div className="flex flex-col w-full min-h-280 items-center justify-center relative">
+          <div className="w-full flex flex-col justify-center items-center mb-10 gap-3 absolute top-0 ">
+            <h1 className="text-5xl md:text-7xl font-medium tracking-tight animate-fade-in-up text-center font-display ">
               Featured Recipes
             </h1>
-            <p className="text-neutral-600 text-base">
+            <p className="text-neutral-600 text-base max-w-xs text-center md:w-full">
               Handpicked delicious recipes to inspire your next meal
             </p>
           </div>
@@ -53,14 +53,14 @@ const CardSection = () => {
       ) : (
         <>
           <div className="w-full flex flex-col justify-center items-center mb-20 gap-3 ">
-            <h1 className="text-2xl md:text-7xl font-medium tracking-tight animate-fade-in-up text-center font-display ">
+            <h1 className="text-5xl md:text-7xl font-medium tracking-tight animate-fade-in-up text-center font-display ">
               Featured Recipes
             </h1>
-            <p className="text-neutral-600 text-base">
+            <p className="text-neutral-600 text-base md:text-lg  max-w-xs text-center md:w-full">
               Handpicked delicious recipes to inspire your next meal
             </p>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-5 justify-items-center items-start max-w-6xl m-auto mb-20">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-5 justify-items-center items-start md:max-w-6xl m-auto mb-20 px-5 md:px-0.5  ">
             {imgUrl.map((meal, index) => (
               <motion.div
                 key={meal.idMeal}
@@ -70,12 +70,12 @@ const CardSection = () => {
                   duration: 0.2,
                   delay: index * 0.09,
                 }}
-                layoutId={`card-container-${meal.idMeal}`} 
+                layoutId={`card-container-${meal.idMeal}`}
                 onClick={() => handleClick(meal)}
                 className="bg-white flex flex-col gap-6 justify-center items-center rounded-2xl h-full  cursor-pointer shadow-sm border-neutral-200 border overflow-hidden"
               >
                 <motion.img
-                  layoutId={`card-image-${meal.idMeal}`} 
+                  layoutId={`card-image-${meal.idMeal}`}
                   src={meal.strMealThumb}
                   className="w-full   shadow-sm object-cover"
                 />

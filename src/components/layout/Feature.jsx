@@ -28,14 +28,14 @@ const Feature = () => {
   return (
     <div className="max-w-6xl m-auto mb-20">
       <div className="w-full flex flex-col justify-center items-center mt-50 mb-20 gap-3 ">
-        <h1 className="text-2xl md:text-7xl font-medium tracking-tight animate-fade-in-up text-center font-display ">
+        <h1 className="text-4xl md:text-7xl font-medium tracking-tight animate-fade-in-up text-center font-display">
           How AI Helps You Cook
         </h1>
-        <p className="text-neutral-600 text-base">
+<p className="text-neutral-600 text-base md:text-lg  max-w-xs text-center md:w-full">
           Your intelligent cooking companion for every step of the journey
         </p>
       </div>
-      <div className="grid grid-cols-3 justify-items-center items-center">
+      <div className="grid md:grid-cols-3 gap-9 md:gap-0.5 justify-items-center items-center">
         {features.map((feature, index) => {
           return (
             <MotionDiv

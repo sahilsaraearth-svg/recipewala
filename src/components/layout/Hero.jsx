@@ -5,8 +5,8 @@ import { Herobtn, HerobtnTwo } from "../ui/Button";
 const Hero = () => {
   return (
     <div className="bg-linear-to-b from-white to-green-50">
-      <div className=" h-200 flex flex-col gap-15 items-center justify-center max-w-6xl mx-auto pb-25 relative ">
-        <h1 className="mt-4 text-3xl md:text-8xl font-medium tracking-tight animate-fade-in-up text-center font-display">
+      <div className=" h-140 md:h-200 flex flex-col gap-15 items-center justify-center max-w-6xl mx-auto pb-25 relative ">
+        <h1 className="mt-4 text-4xl md:text-8xl font-medium tracking-tight animate-fade-in-up text-center font-display">
           Quick Recipes &amp; <br />
           Better Ways{" "}
           <span className="text-[#F83002] relative">

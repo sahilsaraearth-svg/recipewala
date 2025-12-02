@@ -81,7 +81,7 @@ const AiRecipe = () => {
 
   return (
     <div className="min-h-screen max-w-4xl m-auto p-3">
-      <div className="flex flex-col shadow-sm min-h-[80vh] md:min-h-[85vh] overflow-x-auto p-3 rounded-2xl bg-neutral-50 border-neutral-200 border items-center gap-5">
+      <div className="flex flex-col shadow-sm min-h-[80vh] max-h-96 mt-5 md:mt-0 md:min-h-[85vh] overflow-x-auto p-3 rounded-2xl bg-neutral-50 border-neutral-200 border items-center gap-5">
         <div className="w-full flex justify-center items-center pb-3 gap-3 border-b border-neutral-200">
           <h1 className="text-2xl md:text-xl font-medium tracking-tight text-center font-display flex-1 flex flex-col">
             Chefy AI
@@ -119,7 +119,7 @@ const AiRecipe = () => {
                 className={`p-3 m-2 rounded-2xl max-w-xs text-wrap ${
                   isUser
                     ? "bg-neutral-200/40 w-fit ml-auto text-right border border-neutral-100 shadow-neutral-400 shadow-xs px-5 py-1 text-sm"
-                    : " min-w-xl mr-auto text-left px-5 py-1 text-sm"
+                    : "ml-0  md:min-w-xl mr-auto text-left md:px-5 md:py-1 text-sm "
                 }`}
               >
                 <div className="whitespace-pre-wrap">{msg.content}</div>
@@ -135,7 +135,7 @@ const AiRecipe = () => {
             </div>
           )}
         </div>
-        <div className="flex flex-col sm:flex-row gap-3 bg-white shadow-sm border border-neutral-200 w-full max-w-xl py-1.5 px-5 rounded-full">
+        <div className="flex  sm:flex-row gap-3 bg-white shadow-sm border border-neutral-200 w-full max-w-xl py-1.5 px-5 rounded-full">
           <input
             className={
               !auth.isAuthenticated
@@ -166,7 +166,7 @@ const AiRecipe = () => {
           >
             {isLoading ? (
               <div className="flex items-center gap-2">
-                <div className="animate-spin w-4 h-4 border-2 border-black/30 border-t-black rounded-full"></div>
+                <div className="animate-spin w-4 h-4 border-2 border-neutral-200/30 border-t-white rounded-full"></div>
                 <p>Sending</p>
               </div>
             ) : (
