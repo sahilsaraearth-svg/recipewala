@@ -23,10 +23,11 @@ const Navbar = () => {
       <div className="flex  rounded-full justify-between items-center max-w-6xl mx-auto ">
         <div className="flex items-center gap-2">
           <Link to="/">
+
             <img
-              src="../src/assets/logo.png"
+              src="../src/assets/logo.svg"
               alt="logo"
-              className="h-10 w-10 cursor-pointer"
+              className="h-10 w-12 cursor-pointer"
             />
           </Link>
           <Link
